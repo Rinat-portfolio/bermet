@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Happy Birthday</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      @font-face {
+        font-family: "Inconsolata" !important;
+        src: url("Inconsolata.otf") format("truetype");
+      }
+
+      #player {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        position: absolute;
+        top: -9999px; /* Hides the video */
+      }
+      #content {
+        margin-top: 100px !important;
+      }
+      #code {
+        position: absolute;
+        right: 120px;
+      }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("player", {
+          height: "360",
+          width: "640",
+          videoId: "lSIrWc5EuQk",
+        });
+      }
+
+	  let intervalVideo = setInterval(function () {
+        playVideo();
+      }, 1000);
+
+      function playVideo() {
+		clearInterval(intervalVideo);
+        player.playVideo();
+      }
+
+      
+
+      
+
+
+    </script>
+  </head>
+
+  <body onclick="playVideo()">
+    <div style="position: relative">
+      <div style="position: absolute; left: 0; top: 0">
+        <div id="mainDiv">
+          <div id="content">
+            <div id="player"></div>
+
+            <div id="code" style="font-size: 20px !important">
+              <pre style="color: white">
+	<html><body>
+	
+
+		На стене в твоем подъезде я пишу тебе письмо
+		Начинаю на 10-м, а закончу на 8-ом.
+		Ты обычная девчонка. Я не принц и не герой.
+		Но я обещаю только, что всегда буду с тобой.
+
+		Ее улыбка беззаботная, с ямочками,
+		А я путаюсь в мыслях беспорядочно.
+		Подбираю слова к тому, что объяснить нельзя.
+		Она улыбается. Глупая ситуация.
+
+		Откуда ты свалилась мне на голову?
+		Она была, по ходу, явно не готова.
+		Не пойму, смеется над шутками или надо мной?
+		Последний анекдот, и спрошу номер твой.
+
+		На замерзших окнах я рисую твой портрет.
+		Засыпая без тебя, я на ночь оставляю свет.
+		Карандашами в дневнике прячу мысли о тебе…
+		Ты еще не знаешь, что Москва слезам не верит,
+		Но если ты заплачешь, я буду рядом, поверь мне.
+
+		На стене в твоем подъезде я пишу тебе письмо
+		Начинаю на 10-м, а закончу на 8-ом.
+		Ты обычная девчонка. Я не принц и не герой.
+		Но я обещаю только, что всегда буду с тобой.
+
+		Я всегда буду с тобой!
+
+		Она верит новостям на Первом канале.
+		И что в "Жди меня" приходят те, кого искали.
+		Любит читать Бродского в метро.
+		В плеере Rihanna, а в душе Нью-Йорк.
+
+		По ночному городу часами гуляли.
+		Сутками на телефоне ни о чем болтали.
+		И я просил ее остаться со мной.
+		Она сказала: "Я всегда буду с тобой!"
+
+		На замерзших окнах я рисую твой портрет.
+		Засыпая без тебя, я на ночь оставляю свет.
+		Карандашами в дневнике прячу мысли о тебе…
+		Ты еще не знаешь, что Москва слезам не верит,
+		Но если ты заплачешь, я буду рядом, поверь мне.
+
+		На стене в твоем подъезде я пишу тебе письмо
+		Начинаю на 10-м, а закончу на 8-ом.
+		Ты обычная девчонка. Я не принц и не герой.
+		Но я обещаю только, что всегда буду с тобой.
+
+		Я всегда буду с тобой!
+		Я всегда буду с тобой!
+
+		На стене в твоем подъезде я пишу тебе письмо
+		Начинаю на 10-м, а закончу на 8-ом.
+		Я обычная девчонка. Ты не принц и не герой.
+		Но я обещаю точно, что всегда буду с тобой.
+		Но я обещаю точно, что всегда буду с тобой.
+		Всегда буду!
+		Всегда буду с тобой!
+		Но я обещаю точно, что всегда буду с тобой.
+		
+	
+</body></html> 
+</pre>
+            </div>
+            <div id="loveHeart">
+              <canvas id="garden"></canvas>
+              <div id="words">
+                <div id="messages">
+                  Сколько прошло с того особенного дня:
+                  <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                  <span style="color: #ffffff">
+                    <big> Желаю тебе </big>
+                  </span>
+                  <br />
+                  много радости и счастья,
+                  <br />пусть жизнь будет полна <br />улыбок 😁
+
+                  <div class="signature">- the person you like :)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; left: 0; top: 0">
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2023, 8, 23);
+      together.setHours(23);
+      together.setMinutes(23);
+      together.setSeconds(0);
+      together.setMilliseconds(0);
+
+      if (!document.createElement("canvas").getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML =
+          "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        $("#copyright").css("position", "absolute");
+        $("#copyright").css("bottom", "10px");
+        document.execCommand("stop");
+      } else {
+        setTimeout(function () {
+          startHeartAnimation();
+        }, 5000);
+
+        timeElapse(together);
+        setInterval(function () {
+          timeElapse(together);
+        }, 500);
+
+        $("#code").typewriter();
+      }
+    </script>
+    <script type="text/javascript" src="js/fireworks.js"></script>
+  </body>
+</html>
